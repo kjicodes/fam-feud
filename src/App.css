@@ -1,1 +1,44 @@
+.App {
+  background-color: #022E51;
+  /* overflow-y: scroll; */
+  color: white;
+}
 
+
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #A3B4C8;
+  color: #B74803;    
+}
+
+.Question {
+  text-align: center;
+  font-size: 30px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.Above {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Below {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Cards {
+  text-align: center;
+}
+
+
+.RoundBtn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
