@@ -1,11 +1,10 @@
 .App {
   background-color: #022E51;
-  /* overflow-y: scroll; */
   color: white;
 }
 
 
-.Nav {
+/* .Nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,11 +33,4 @@
 
 .Cards {
   text-align: center;
-}
-
-
-.RoundBtn {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+} */

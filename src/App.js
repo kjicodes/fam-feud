@@ -33,19 +33,13 @@ export default class App extends Component {
           team={this.state.team} 
           scores={this.state.scores}
         />
-        <div className="Question">
-          <Question question={this.state.question} />
-        </div>
-        <div>
-          <Cards />
-        </div>
-        <div className="RoundBtn">
-          <RoundButton round={1} />
-          <RoundButton round={2} />
-          <RoundButton round={3} />
-          <RoundButton round={4} />
-          <RoundButton round={5} />
-        </div>
+        <Question question={this.state.question} />
+        <Cards />
+        <RoundButton round={1} />
+        <RoundButton round={2} />
+        <RoundButton round={3} />
+        <RoundButton round={4} />
+        <RoundButton round={5} />
       </div>
     );
   }
