@@ -1,3 +1,3 @@
-# "We're In This Together" Feud
+# "We're All Related" Feud
 
-"We're In this Together" Feud
+"We're All Related" Feud

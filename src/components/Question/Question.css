@@ -1,0 +1,8 @@
+.Question {
+  text-align: center;
+  border: 10px solid white;
+  outline: 3px solid black;
+  color: #B74803;
+  background-color: black;
+  padding: 7px;
+}
