@@ -23,7 +23,7 @@ export default class App extends Component {
 
   // }
 
-  addPoints = () => {
+  handleScore = () => {
     this.setState ({ 
       roundScore: this.state.roundScore + 20,
       status: 'GOOD GUESS!'
@@ -35,26 +35,37 @@ export default class App extends Component {
       this.setState({
         round: incomingRound,
         roundScore: 0,
-        question: 'NAME SOMETHING YOU FILL WITH AIR'
+        chances: 3,
+        question: 'NAME SOMETHING YOU FILL WITH AIR',
+        status: 'PLAY!'
       })
     } else if (incomingRound === 3) {
       this.setState({
         round: incomingRound,
         roundScore: 0,
-        question: 'NAME SOMEONE THAT WORKS IN A HOSPITAL'
+        chances: 3,
+        question: 'NAME SOMEONE THAT WORKS IN A HOSPITAL',
+        status: 'PLAY!'
       })
     } 
   };
 
-  updateChances = () => {
-    this.setState({ 
-      chances: this.state.chances - 1,
-      status: 'OH NO, TRY AGAIN'
+
+
+  handleChances = () => {
+    this.setState({ chances: this.state.chances - 1 }, () => {
+      this.updateChancesStatus(this.state.chances)
     })
   };
 
-  updateStatus = () => {
-    
+  updateChancesStatus = (chances) => {
+    if (chances === 2) {
+      this.setState ({ status: "UH OH, CAREFUL"})
+    } else if (chances === 1) {
+      this.setState ({ status: "LAST CHANCE!"})
+    } else {
+      this.setState ({ status: "GAME OVER"})
+    }
   }
 
 
@@ -73,8 +84,8 @@ export default class App extends Component {
         <br />
         <GameButton 
           status={this.state.status}
-          addPoints={this.addPoints}
-          updateChances={this.updateChances}
+          handleScore={this.handleScore}
+          handleChances={this.handleChances}
         />
         <br />
         <RoundButtons updateRound={this.updateRound} />
