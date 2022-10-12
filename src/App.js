@@ -10,32 +10,30 @@ import RoundButtons from './components/RoundButtons/RoundButtons';
 export default class App extends Component {
 
   state = {
+    user: '',
     round: 1,
-    team: ['', ''],
-    currTeam: '',
-    question: "NAME SONGS WITH THE WORD 'LOVE' IN THE TITLE", // 5 questions in total = 5 rounds?
-    scores: [0, 0], // scores for each team (each family) 
-    card: '', // word behind each card
-    isWrong: 0,
-    showCard: [false, false, false, false], // 4 answer cards - to show the card if guess is correct, start false
-    showX: false, // X's shown for wrong guesses, 3 attempts
-    roundScore: 0
+    question: "NAME A SONG WITH THE WORD 'LOVE' IN IT",
+    score: 0,
+    cards: ['I WILL ALWAYS LOVE YOU - 45', 'CRAZY IN LOVE - 35', 'AS LONG AS YOU LOVE ME - 20'], // add each card score to score
+    chances: 3,
+    showCard: [false, false, false] // 3 answer cards - to show the card if guess is correct, start false
   }
-
-  update
-
+  
+ // when a card is 'clicked', showCard = true
 
   render() {
     return (
       <div className="App">
         <Nav />
+        <br />
         <Header 
           round={this.state.round} 
-          team={this.state.team} 
-          scores={this.state.scores}
+          score={this.state.score}
+          chances={this.state.chances}
         />
+        <br />
         <Question question={this.state.question} />
-        <Cards />
+        <br/>
         <RoundButtons />
       </div>
     );

@@ -13,10 +13,13 @@ app.use(express.json()) // body perser - get's json to... (listen to recording)
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
-// Mounted routes
+// Mounted routes (before catch-all routes)
 
 
 // Catch-all routes
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 
 // Configure to use port 3001 instead of 3000 during
