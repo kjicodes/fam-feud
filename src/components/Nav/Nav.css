@@ -1,0 +1,12 @@
+.Nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+#login {
+  color: #A3B4C8;
+}
+
+#title {
+  color: #CC6D3D;
+}

@@ -1,7 +1,11 @@
 export default function Card(props) {
   return (
     <div className="Card">
-      {props.card}
+      {props.answer}
+      {props.isPicked}
+      {props.score}
     </div>
   )
 }
+
+// props: answer (string), isPicked (boolean), Score (number)
