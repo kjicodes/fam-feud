@@ -68,6 +68,9 @@ export default class App extends Component {
     }
   }
 
+  updateAddStatus = () => {
+    
+  }
 
   render() {
     return (
