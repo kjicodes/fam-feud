@@ -1,12 +1,11 @@
-import RoundButton from '../RoundButton/RoundButton';
 import './RoundButtons.css';
 
 export default function RoundButtons(props) {
   return (
     <div className="RoundBtns">
-        <RoundButton round={1} />
-        <RoundButton round={2} />
-        <RoundButton round={3} />
+      <button id="btn" onClick={() => props.updateRound(1)}>Round 1</button>
+      <button id="btn" onClick={() => props.updateRound(2)}>Round 2</button>
+      <button id="btn" onClick={() => props.updateRound(3)}>Round 3</button>
     </div>
   )
 }
