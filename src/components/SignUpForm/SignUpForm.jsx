@@ -2,7 +2,6 @@ import { Component } from "react";
 
 export default class SignUpForm extends Component {
   state = {
-    name: "",
     email: "",
     password: "",
     confirm: "",
@@ -24,7 +23,6 @@ export default class SignUpForm extends Component {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: this.state.name,
           email: this.state.email,
           password: this.state.password,
         }),
@@ -50,14 +48,6 @@ export default class SignUpForm extends Component {
       <div>
         <div className="form-container">
           <form autoComplete="off" onSubmit={this.handleSubmit}>
-            <label>Name</label>
-            <input
-              type="text"
-              name="name"
-              value={this.state.name}
-              onChange={this.handleChange}
-              required
-            />
             <label>Email</label>
             <input
               type="email"
