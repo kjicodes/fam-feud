@@ -9,7 +9,8 @@ export default class NewTeamPage extends Component {
   state = {
     teams: [{ name: "The Co-Vengers", players: 4}],
     name: "",
-    players: 3
+    players: 3,
+    
   }
 
   handleChange = (e) => {
@@ -62,13 +63,22 @@ export default class NewTeamPage extends Component {
           <button className='CreateBtn'>CREATE TEAM</button>
         </form>
         <br /><br />
-        <Link className='Play' to='/relatedfeud/game'>PLAY GAME</Link><br /><br /><hr />
+        <Link className='Play' to='/warfeud/game'>PLAY GAME</Link><br /><br /><hr />
         <h2>TEAM HISTORY</h2><br />
-        <div>
-          {this.state.teams.map(t => (
-            <div>{t.name} - {t.players}</div>
-          ))}
-        </div>
+        <table>
+          <tbody>
+            {this.state.teams.map(t => (
+              <tr>
+                <td>
+                  <div>{t.name} - {t.players}</div>
+                </td>
+                <td>
+                  <button id='x'>X</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     )
   }
