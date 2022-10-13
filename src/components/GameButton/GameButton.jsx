@@ -5,8 +5,8 @@ export default function GameButton(props) {
     <div className="GameBtn">
       <h3 id="status">{props.status}</h3>
       <div className="GameBtns">
-        <button id="add" onClick={props.handleScore}>ADD POINTS</button>
-        <button id="strike" onClick={props.handleChances}>STRIKE</button>
+        <button id="add" onClick={props.updateScore}>ADD POINTS</button>
+        <button id="strike" onClick={props.updateChances}>STRIKE</button>
       </div>
     </div>
   )
