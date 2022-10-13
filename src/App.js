@@ -32,16 +32,16 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.state.user ? (
+        {/* {this.state.user ? ( */}
           <Routes>
             <Route path="/warfeud" element={<HomePage />} />
             <Route path="/warfeud/new" element={<NewTeamPage />} />
             <Route path="/warfeud/game" element={<GamePage />} />
             <Route path="*" element={<Navigate to="/warfeud" replace />} />
           </Routes>
-        ) : (
+        {/* ) : (
           <AuthPage setUserInState={this.setUserInState} />
-        )}
+        )} */}
       </div>
     );
   }
