@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import Header from "../../components/Header/Header";
-import Nav from "../../components/Nav/Nav";
+
 import Question from "../../components/Question/Question";
 import GameButton from "../../components/GameButton/GameButton";
 import RoundButton from "../../components/RoundButton/RoundButton";
@@ -14,11 +14,11 @@ export default class GamePage extends Component {
     roundScore: 0,
     question: "NAME A SONG WITH THE WORD 'LOVE' IN IT",
     chances: 3,
-    status: "PLAY!"
-  }
+    status: "PLAY!",
+  };
 
   updateScore = () => {
-    this.setState ({ 
+    this.setState({
       roundScore: this.state.roundScore + 20,
       status: "GOOD GUESS!",
     });
@@ -60,7 +60,6 @@ export default class GamePage extends Component {
     }
   };
 
-  
   render() {
     return (
       <>
@@ -69,15 +68,18 @@ export default class GamePage extends Component {
           roundScore={this.state.roundScore}
           chances={this.state.chances}
         />
-        <br /><br />
+        <br />
+        <br />
         <Question question={this.state.question} />
-        <br /><br />
-        <GameButton 
+        <br />
+        <br />
+        <GameButton
           status={this.state.status}
           updateScore={this.updateScore}
           updateChances={this.updateChances}
         />
-        <br /><br />
+        <br />
+        <br />
         <RoundButton updateRound={this.updateRound} />
       </>
     );

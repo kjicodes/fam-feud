@@ -1,17 +1,13 @@
-import { Component } from 'react';
-import { Link } from 'react-router-dom';
-import './NewTeamPage.css';
-
-import Nav from '../../components/Nav/Nav';
+import { Component } from "react";
+import { Link } from "react-router-dom";
+import "./NewTeamPage.css";
 
 export default class NewTeamPage extends Component {
-  
   state = {
-    teams: [{ name: "The Co-Vengers", players: 4}],
+    teams: [{ name: "The Co-Vengers", players: 4 }],
     name: "",
     players: 3,
-    
-  }
+  };
 
   //Backend
   getTeams = async () => {
@@ -27,22 +23,23 @@ export default class NewTeamPage extends Component {
 
   
   handleChange = (e) => {
-    // console.log(e.target.value) 
-    this.setState({ [e.target.name]: e.target.value}) 
-  }
+    // console.log(e.target.value)
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
   addTeam = (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    console.log(e.target.checkValidity());
     let newTeam = {
       name: this.state.name,
-      players: this.state.players
-    }
+      players: this.state.players,
+    };
     this.setState({
       teams: [...this.state.teams, newTeam],
       name: "",
-      players: 3
-    })
-  }
+      players: 3,
+    });
+  };
 
   deleteTeam = (e) => {
     e.preventDefault()
@@ -52,32 +49,40 @@ export default class NewTeamPage extends Component {
 
   render() {
     return (
-      <div className='NewTeam'>
-        <h1 className='NewT'>NEW TEAM</h1><hr /><br />
+      <div className="NewTeam">
+        <Nav />
+        <h1 className="NewT">NEW TEAM</h1>
+        <hr />
+        <br />
         <form onSubmit={this.addTeam}>
           <label>
             <span>NAME: </span>
-            <input 
-              name='name' 
-              value={this.state.name} 
-              onChange={this.handleChange} 
+            <input
+              name="name"
+              value={this.state.name}
+              onChange={this.handleChange}
               required
-              pattern='.{2,}'
+              pattern=".{2,}"
             />
           </label>
           <br />
           <label>
             <span>PLAYERS: </span>
-            <select name='players' value={this.state.players} onChange={this.handleChange}>
-              <option value='2'>2</option>
-              <option value='3'>3</option>
-              <option value='4'>4</option>
-              <option value='5'>5</option>
-              <option value='6'>6</option>
+            <select
+              name="players"
+              value={this.state.players}
+              onChange={this.handleChange}
+            >
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
             </select>
           </label>
-          <br /><br />
-          <button className='CreateBtn'>CREATE TEAM</button>
+          <br />
+          <br />
+          <button className="CreateBtn">CREATE TEAM</button>
         </form>
         <br /><br />
         <Link className='Play' to='/warfeud/game'>PLAY GAME</Link><br /><br /><hr />
@@ -105,7 +110,6 @@ export default class NewTeamPage extends Component {
           </tbody>
         </table>
       </div>
-    )
+    );
   }
-
 }

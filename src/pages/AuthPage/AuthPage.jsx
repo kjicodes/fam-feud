@@ -1,23 +1,29 @@
-import { useState } from "react";
+import { Component } from "react";
 import "./AuthPage.css";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 
-export default function AuthPage({ setUser }) {
-  const [showLogin, setShowLogin] = useState(true);
+export default class AuthPage extends Component {
+  state = {
+    showLogin: true,
+  };
 
-  return (
-    <main className="AuthPage">
-      <div>
-        <h3 onClick={() => setShowLogin(!showLogin)}>
-          {showLogin ? "SIGN UP" : "LOG IN"}
-        </h3>
+  render() {
+    return (
+      <div className="AuthPage">
+        <div>
+          <h3
+            onClick={() => this.setState({ showLogin: !this.state.showLogin })}
+          >
+            {this.state.showLogin ? "SIGN UP" : "LOG IN"}
+          </h3>
+        </div>
+        {this.state.showLogin ? (
+          <LoginForm setUserInState={this.props.setUserInState} />
+        ) : (
+          <SignUpForm setUserInState={this.props.setUserInState} />
+        )}
       </div>
-      {showLogin ? (
-        <LoginForm setUser={setUser} />
-      ) : (
-        <SignUpForm setUser={setUser} />
-      )}
-    </main>
-  );
+    );
+  }
 }
