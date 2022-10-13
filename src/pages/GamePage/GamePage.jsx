@@ -63,8 +63,6 @@ export default class GamePage extends Component {
   render() {
     return (
       <>
-        <Nav />
-        <br />
         <Header
           round={this.state.round}
           roundScore={this.state.roundScore}
