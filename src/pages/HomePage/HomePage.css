@@ -1,0 +1,48 @@
+.Home {
+  text-align: center;
+}
+
+.Title {
+  text-align: center;
+  color: #CC8B65;
+}
+
+.Instructions {
+  color: gold;       
+  text-align: center;
+}
+
+.Instr {
+  color: white;
+}
+
+.Related {
+  color: #CC8B65;
+  font-size: 20px;        
+}
+
+.Team {
+  color: #CC8B65;
+}
+
+.Link {
+  color: gold;
+  text-decoration: none;
+}
+
+.Link:hover {
+  color: white;
+}
+
+.New:hover {
+  color: #CC8B65;
+  outline: 7px solid white;
+}
+
+.New {
+  color: gold;
+  background-color: black;
+  border: 6px solid black;
+  outline: 7px solid #CC8B65;
+  text-decoration: none;
+}

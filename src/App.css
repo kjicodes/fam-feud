@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+.App {
+  background-color: #013328;
+  color: #E3DCD2;
+  font-family: 'Exo 2';
+  padding: 20px;
+}
