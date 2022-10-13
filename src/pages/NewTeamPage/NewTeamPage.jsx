@@ -50,7 +50,7 @@ export default class NewTeamPage extends Component {
   render() {
     return (
       <div className="NewTeam">
-        <Nav />
+        {/* <Nav /> */}
         <h1 className="NewT">NEW TEAM</h1>
         <hr />
         <br />
