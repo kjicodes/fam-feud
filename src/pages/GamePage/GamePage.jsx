@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 import Header from "../../components/Header/Header";
 
@@ -63,7 +62,6 @@ export default class GamePage extends Component {
   render() {
     return (
       <>
-        <Nav />
         <br />
         <Header
           round={this.state.round}
