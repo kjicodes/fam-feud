@@ -8,17 +8,17 @@ import HomePage from "./pages/HomePage/HomePage";
 import NewTeamPage from "./pages/NewTeamPage/NewTeamPage";
 
 export default class App extends Component {
+
   render() {
     return (
       <div className="App">
-        <Nav />
+        {/* <Nav /> */}
         <Routes>
           <Route path="/warfeud" element={<HomePage />} />
           <Route path="/warfeud/new" element={<NewTeamPage />} />
           <Route path="/warfeud/game" element={<GamePage />} />
           <Route path="*" element={<Navigate to="/warfeud" replace />} />
         </Routes>
-        :
         {/* <AuthPage /> */}
       </div>
     );

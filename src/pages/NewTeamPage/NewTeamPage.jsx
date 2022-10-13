@@ -13,6 +13,19 @@ export default class NewTeamPage extends Component {
     
   }
 
+  //Backend
+  getTeams = async () => {
+    await fetch('/api')
+      .then(res => res.json()) 
+      .then(teams => this.setState({ teams })) // correctly grabbing teams?
+  }
+
+  componentDidMount() {
+    this.getTeams()
+  }
+
+
+  
   handleChange = (e) => {
     // console.log(e.target.value) 
     this.setState({ [e.target.name]: e.target.value}) 
@@ -20,7 +33,6 @@ export default class NewTeamPage extends Component {
 
   addTeam = (e) => {
     e.preventDefault()
-    console.log(e.target.checkValidity())
     let newTeam = {
       name: this.state.name,
       players: this.state.players
@@ -32,10 +44,15 @@ export default class NewTeamPage extends Component {
     })
   }
 
+  deleteTeam = (e) => {
+    e.preventDefault()
+    this.setState({ teams: this.state.teams.filter(team => team !== e.target.value)})
+  }
+  
+
   render() {
     return (
       <div className='NewTeam'>
-        <Nav />
         <h1 className='NewT'>NEW TEAM</h1><hr /><br />
         <form onSubmit={this.addTeam}>
           <label>
@@ -65,18 +82,26 @@ export default class NewTeamPage extends Component {
         <br /><br />
         <Link className='Play' to='/warfeud/game'>PLAY GAME</Link><br /><br /><hr />
         <h2>TEAM HISTORY</h2><br />
-        <table>
+        <table className='Table'>
           <tbody>
-            {this.state.teams.map(t => (
-              <tr>
-                <td>
-                  <div>{t.name} - {t.players}</div>
-                </td>
-                <td>
-                  <button id='x'>X</button>
+
+            {this.state.teams.length ? 
+              this.state.teams.map(t => (
+                <tr>
+                  <td>
+                    <div>{t.name} - {t.players}</div>
+                  </td>
+                  <td>
+                  <form onSubmit={this.deleteTeam}>
+                    <button id='x'>X</button>
+                  </form>
                 </td>
               </tr>
-            ))}
+            ))
+              :
+              <h2>No teams yet</h2>
+            }
+
           </tbody>
         </table>
       </div>
