@@ -1,65 +1,37 @@
-import { Link } from "react-router-dom";
+import React from "react";
 import "./Nav.css";
 
 export default function Nav(props) {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        Navbar
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">
-              Home <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Features
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Pricing
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdownMenuLink"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown link
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">
-                Action
-              </a>
-              <a class="dropdown-item" href="#">
-                Another action
-              </a>
-              <a class="dropdown-item" href="#">
-                Something else here
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
+    <nav className="navbar">
+      <ul className="nav-link">
+        <li className="title">We're All Related Feud</li>
+        <li>
+          <a href="/" className="game">
+            Play Game
+          </a>
+        </li>
+        <li>
+          <a href="/" className="game">
+            Home
+          </a>
+        </li>
+        <li className="dropdown">
+          <button className="dropbtn">Account</button>
+
+          <div className="dropdown-content">
+            <li>
+              <a href="/">User</a>
+            </li>
+            <li>
+              <a href="/">Log In</a>
+            </li>
+            <li>
+              <a href="/">Log Out</a>
+            </li>
+          </div>
+        </li>
+      </ul>
     </nav>
   );
 }
