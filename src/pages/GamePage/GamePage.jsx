@@ -10,27 +10,19 @@ import RoundButton from "../../components/RoundButton/RoundButton";
 export default class GamePage extends Component {
   state = {
     username: "",
-    teamName: "",
     round: 1,
     roundScore: 0,
     question: "NAME A SONG WITH THE WORD 'LOVE' IN IT",
     chances: 3,
-    status: "PLAY!",
-  };
+    status: "PLAY!"
+  }
 
-  // when a card is 'clicked', showCard = true
-  // handleClick = () => {
-
-  // }
-
-  handleScore = () => {
-    this.setState({
+  updateScore = () => {
+    this.setState ({ 
       roundScore: this.state.roundScore + 20,
       status: "GOOD GUESS!",
     });
   };
-
-  updateScoreStatus = () => {};
 
   updateRound = (incomingRound) => {
     if (incomingRound === 2) {
@@ -52,7 +44,7 @@ export default class GamePage extends Component {
     }
   };
 
-  handleChances = () => {
+  updateChances = () => {
     this.setState({ chances: this.state.chances - 1 }, () => {
       this.updateChancesStatus(this.state.chances);
     });
@@ -68,6 +60,7 @@ export default class GamePage extends Component {
     }
   };
 
+  
   render() {
     return (
       <>
@@ -78,15 +71,15 @@ export default class GamePage extends Component {
           roundScore={this.state.roundScore}
           chances={this.state.chances}
         />
-        <br />
+        <br /><br />
         <Question question={this.state.question} />
-        <br />
-        <GameButton
+        <br /><br />
+        <GameButton 
           status={this.state.status}
-          handleScore={this.handleScore}
-          handleChances={this.handleChances}
+          updateScore={this.updateScore}
+          updateChances={this.updateChances}
         />
-        <br />
+        <br /><br />
         <RoundButton updateRound={this.updateRound} />
       </>
     );
