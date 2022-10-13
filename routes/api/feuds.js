@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const feudCtrl = require("../controllers/feuds");
+const feudCtrl = require("../../controllers/feuds");
 
 // GET all posts
 router.get("/", feudCtrl.index);
