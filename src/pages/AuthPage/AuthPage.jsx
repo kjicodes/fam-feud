@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./AuthPage.css";
 import LoginForm from "../../components/LoginForm/LoginForm";
-import Logo from "../../components/Logo/Logo";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 
 export default function AuthPage({ setUser }) {
