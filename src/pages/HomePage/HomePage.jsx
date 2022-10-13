@@ -12,7 +12,7 @@ export default function HomePage(props) {
       <p className='Instructions'>INSTRUCTIONS</p>
       <p>To play, create a <span className='Team'>new team</span> using the link below.</p><br />
       <p></p>
-      <Link className='New' to='/relatedfeud/new'>New Team</Link><br />
+      <Link className='New' to='/warfeud/new'>New Team</Link><br />
       <br />
     </div>
   )

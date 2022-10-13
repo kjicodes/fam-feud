@@ -13,13 +13,13 @@ export default class App extends Component {
       <div className="App">
         <Nav />
         <Routes>
-          <Route path="/relatedfeud" element={<HomePage />} />
-          <Route path="/relatedfeud/new" element={<NewTeamPage />} />
-          <Route path="/relatedfeud/game" element={<GamePage />} />
-          <Route path="*" element={<Navigate to="/relatedfeud" replace />} />
+          <Route path="/warfeud" element={<HomePage />} />
+          <Route path="/warfeud/new" element={<NewTeamPage />} />
+          <Route path="/warfeud/game" element={<GamePage />} />
+          <Route path="*" element={<Navigate to="/warfeud" replace />} />
         </Routes>
         :
-        <AuthPage />
+        {/* <AuthPage /> */}
       </div>
     );
   }
