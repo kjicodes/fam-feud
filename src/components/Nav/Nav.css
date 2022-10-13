@@ -1,12 +1,13 @@
 .Nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
-#login {
-  color: #A3B4C8;
+.HomeLink {
+  text-decoration: none;
+  color: #E3DCD2;
 }
 
-#title {
-  color: #CC6D3D;
+.HomeLink:hover {
+  color: #CC8B65;
 }

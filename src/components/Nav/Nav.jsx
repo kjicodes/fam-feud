@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import './Nav.css';
+
 
 export default function Nav(props) {
   return (
     <div className='Nav'>
-      <h2 id='title'>"We're All Related" Feud</h2>
-      <h2 id='login'>Login</h2>
+      <Link className='HomeLink' to='/relatedfeud'>Home</Link>
     </div>
   )
 }

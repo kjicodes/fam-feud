@@ -1,16 +1,17 @@
-import { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-import Header from '../components/Header/Header'; 
-import Nav from '../components/Nav/Nav';
-import Question from '../components/Question/Question';
-import GameButton from '../components/GameButton/GameButton';
-import RoundButtons from '../components/RoundButtons/RoundButtons';
+import Header from '../../components/Header/Header'; 
+import Nav from '../../components/Nav/Nav';
+import Question from '../../components/Question/Question';
+import GameButton from '../../components/GameButton/GameButton';
+import RoundButton from '../../components/RoundButton/RoundButton';
 
-export default class App extends Component {
+export default class GamePage extends Component {
 
   state = {
-    user: '',
+    username: '',
+    teamName: '',
     round: 1,
     roundScore: 0,
     question: "NAME A SONG WITH THE WORD 'LOVE' IN IT",
@@ -29,6 +30,10 @@ export default class App extends Component {
       status: 'GOOD GUESS!'
     })
   };
+
+  updateScoreStatus = () => {
+
+  }
 
   updateRound = (incomingRound) => {
     if (incomingRound === 2) {
@@ -50,8 +55,7 @@ export default class App extends Component {
     } 
   };
 
-
-
+ 
   handleChances = () => {
     this.setState({ chances: this.state.chances - 1 }, () => {
       this.updateChancesStatus(this.state.chances)
@@ -68,13 +72,9 @@ export default class App extends Component {
     }
   }
 
-  updateAddStatus = () => {
-    
-  }
-
   render() {
     return (
-      <div className="App">
+      <>
         <Nav />
         <br />
         <Header 
@@ -91,9 +91,8 @@ export default class App extends Component {
           handleChances={this.handleChances}
         />
         <br />
-        <RoundButtons updateRound={this.updateRound} />
-      </div>
+        <RoundButton updateRound={this.updateRound} />
+      </>
     );
   }
 }
-
