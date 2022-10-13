@@ -1,6 +1,6 @@
 import React from "react";
 
-class UserLogOut extends React.Component {
+export default class UserLogOut extends React.Component {
   render() {
     return (
       <div className="UserLogOut">
@@ -11,5 +11,3 @@ class UserLogOut extends React.Component {
     );
   }
 }
-
-export default UserLogOut;
