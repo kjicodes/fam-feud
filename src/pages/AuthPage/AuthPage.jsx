@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./AuthPage.css";
 import LoginForm from "../../components/LoginForm/LoginForm";
-import Logo from "../../components/Logo/Logo";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 
 export default function AuthPage({ setUser }) {
@@ -10,7 +9,6 @@ export default function AuthPage({ setUser }) {
   return (
     <main className="AuthPage">
       <div>
-        <Logo />
         <h3 onClick={() => setShowLogin(!showLogin)}>
           {showLogin ? "SIGN UP" : "LOG IN"}
         </h3>

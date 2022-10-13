@@ -3,9 +3,15 @@ import './Header.css';
 export default function Header(props) {
   return (
     <div className='Header'>
-      <h2>ROUND: {props.round}</h2>
-      <h2>ROUND SCORE: {props.roundScore}</h2>
-      <h2>CHANCES: {props.chances}</h2>
+      <div>
+        ROUND: {props.round} 
+      </div>
+      <div>
+        ROUND SCORE: {props.roundScore}
+      </div>
+      <div>
+        CHANCES: {props.chances}
+      </div>
     </div>
   )
 }
