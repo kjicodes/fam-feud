@@ -1,6 +1,6 @@
 # WE'RE ALL RELATED Feud
 
-*WE'RE ALL REALATED Feud* is a remake attempt of the daytime game show, "Family Feud", hosted by Steve Harvey.
+*WE'RE ALL RELATED Feud* is a remake attempt of the daytime game show, "Family Feud", hosted by Steve Harvey.
 
 
 ## Technologies Used:
