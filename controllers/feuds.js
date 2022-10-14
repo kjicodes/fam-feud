@@ -8,7 +8,7 @@ module.exports = {
 function index(req, res) {
   Feud.find({}, function (err, feuds) {
     if (err) {
-      res.status(500).json(err);
+      res.status(400).json(err);
     }
     res.json(feuds).status(200);
   });

@@ -36,16 +36,16 @@ export default class App extends Component {
       <main className="App">
         <Nav user={this.state.user} />
         <br />
-        {this.state.user ? (
-          <Routes>
-            <Route path="/warfeud" element={<HomePage />} />
-            <Route path="/warfeud/new" element={<NewTeamPage />} />
-            <Route path="/warfeud/game" element={<GamePage />} />
-            <Route path="*" element={<Navigate to="/warfeud" replace />} />
-          </Routes>
-        ) : (
-          <AuthPage setUserInState={this.setUserInState} />
-        )}
+        {/* {this.state.user ? ( */}
+        <Routes>
+          <Route path="/warfeud" element={<HomePage />} />
+          <Route path="/warfeud/new" element={<NewTeamPage />} />
+          <Route path="/warfeud/game" element={<GamePage />} />
+          <Route path="*" element={<Navigate to="/warfeud" replace />} />
+        </Routes>
+        {/* ) : (
+          <AuthPage setUserInState={this.setUserInState} /> */}
+        {/* )} */}
       </main>
     );
   }
