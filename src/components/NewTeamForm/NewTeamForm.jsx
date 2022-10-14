@@ -29,16 +29,16 @@ export default class NewTeamForm extends Component {
   }
 
 
-  // addTeam = (e) => {
-  //   e.preventDefault();
-  //   console.log(e.target.checkValidity());
-  //   let newTeam = { name: this.state.name };
-  //   this.setState({
-  //     teams: [...this.state.teams, newTeam],
-  //     name: ""
-  //   });
-  // };
 
+  addTeam = (e) => {
+    e.preventDefault();
+    console.log(e.target.checkValidity());
+    let newTeam = { name: this.state.name };
+    this.setState({
+      teams: [...this.state.teams, newTeam],
+      name: ""
+    });
+  };
 
 
   render() {
@@ -59,19 +59,3 @@ export default class NewTeamForm extends Component {
   }
 }
 
-
-
-  // addTeam = (e) => {
-  //   e.preventDefault();
-  //   console.log(e.target.checkValidity());
-  //   let newTeam = { name: this.state.name };
-  //   this.setState({
-  //     teams: [...this.state.teams, newTeam],
-  //     name: ""
-  //   });
-  // };
-
-  // deleteTeam = (e) => {
-  //   e.preventDefault()
-  //   this.setState({ teams: this.state.teams.filter(team => team !== e.target.value)})
-  // }

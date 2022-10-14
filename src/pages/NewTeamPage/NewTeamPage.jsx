@@ -22,6 +22,11 @@ export default class NewTeamPage extends Component {
     this.getTeams()
   };
 
+  deleteTeam = (e) => {
+    e.preventDefault()
+    this.setState({ teams: this.state.teams.filter(team => team !== e.target.value)})
+}
+
   render() {
     return (
       <div className="NewTeam">
@@ -31,7 +36,7 @@ export default class NewTeamPage extends Component {
         <Link className='Play' to='/warfeud/game'>PLAY GAME</Link><br /><br /><hr />
         <h2>TEAM HISTORY</h2><br />
         {this.state.teams.length ?
-          this.state.teams.map(t => <NewTeamPost post={t} /> )
+          this.state.teams.map(t => <NewTeamPost post={t} deleteTeam={this.deleteTeam} /> )
           :
           <h2>No Teams</h2>
         }
@@ -39,11 +44,3 @@ export default class NewTeamPage extends Component {
     )
   }
 }
-
-
-
-
-
-        {/* <form onSubmit={props.deleteTeam}>
-              <button id='x'>X</button>
-            </form> */}
