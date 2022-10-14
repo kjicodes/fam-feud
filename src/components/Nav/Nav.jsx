@@ -1,35 +1,31 @@
-import React from "react";
 import { Component } from "react";
-import { Link } from "react-router-dom";
 import "./Nav.css";
+import { Link } from "react-router-dom";
 
-export default class Nav extends Component() {
+export default class Nav extends Component {
   render() {
     return (
-      <nav className="navbar">
-        <ul className="nav-link">
-          <li className="title">We're All Related Feud</li>
-          <li>
-            <Link to="/warfeud/game" className="game">
-              Play Game
-            </Link>
-          </li>
-          <li>
-            <Link to="/warfeud" className="game">
-              Home
-            </Link>
-          </li>
-          <li className="dropdown">
-            <button className="dropbtn">Account</button>
+      <ul>
+        <li>
+          <Link to="/warfeud" className="game">
+            Log Out
+          </Link>
+        </li>
 
-            <div className="dropdown-content">
-              <li>
-                <Link to="/warfeud">Log Out</Link>
-              </li>
-            </div>
-          </li>
-        </ul>
-      </nav>
+        <li>
+          <Link to="/warfeud" className="game">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/warfeud/game" className="game">
+            Play Game
+          </Link>
+        </li>
+        <Link to="/" className="title">
+          We're All Related Feud
+        </Link>
+      </ul>
     );
   }
 }

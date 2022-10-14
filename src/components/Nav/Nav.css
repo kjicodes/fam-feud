@@ -1,12 +1,27 @@
 ul {
-  width: auto;
-  float: right;
-  margin-top: 9px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
 li {
-  display: inline-block;
-  padding: 5px 3px;
+  float: right;
+  background-color: #333;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 30px 30px;
+  text-decoration: none;
+  background-color: #333;
+}
+
+li a:hover {
+  background-color: #ffd700;
 }
 
 .title {
@@ -14,84 +29,10 @@ li {
   color: #fff;
   font-size: 2.5em;
   position: absolute;
-  top: 1px;
-  left: 10px;
+  top: 10px;
+  left: 25px;
   width: 500px;
   height: 50px;
   font-family: "Nabla", cursive;
-}
-
-.game {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: 600;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-/* .game {
-  text-align: center;
-  text-decoration: none;
-  font-family: "Ubuntu", sans-serif;
-  color: #ffffff;
-  padding: 16px;
-  font-size: 16px;
-} */
-
-.game:hover {
-  background-color: #ffd700;
-}
-
-.navbar {
-  overflow: hidden;
   background-color: #333;
-  font-family: "Ubuntu", sans-serif;
-}
-
-.dropbtn {
-  background-color: #333;
-  color: white;
-  font-size: 1.2em;
-  font-weight: 600;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.dropdown {
-  position: right;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #e3dcd2;
-  min-width: 50px;
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
-  z-index: 2;
-}
-
-.dropdown-content a {
-  color: white;
-  font-size: 1.2em;
-  font-weight: 600;
-  padding: 5px 10px;
-  border-radius: 5px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #333;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #e3dcd2;
 }

@@ -2,14 +2,16 @@
   height: 100%;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: left;
   background-color: var(--white);
   border-radius: 2vmin;
+  padding: 200px;
+  font-size: 1em;
 }
 
 .AuthPage h3 {
   margin-top: 4vmin;
-  text-align: center;
+  text-align: left;
   color: var(--text-light);
   cursor: pointer;
 }
