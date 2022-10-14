@@ -30,8 +30,8 @@ https://trello.com/b/f1Ufadpd/were-all-related-feud
 
 For the future, we would like to implement the following features:
 
-*Adding a profile picture when signing in*
-*A hint button for the game*
+*Adding a profile picture when signing in*<br>
+*A hint button for the game*<br>
 *Adding 'clapping' sounds for when a user makes a correct guess*
 
 
