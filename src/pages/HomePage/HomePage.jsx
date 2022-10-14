@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import './HomePage.css';
 
+import NavHome from '../../components/NavHome/NavHome';
 
 export default function HomePage(props) {
   return (
     <div className='Home'>
+      <NavHome />
       <h1 className='Title'>WE'RE ALL RELATED Feud</h1><br />
       <p className='Instr'>Families fight all the time. Nevertheless, we are still related.</p>
       <p className='Instr'>Get your families together to enjoy a night of <span className='Related'>WE'RE ALL RELATED Feud</span>.</p>

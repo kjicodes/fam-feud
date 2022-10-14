@@ -5,6 +5,7 @@ import Header from "../../components/Header/Header";
 import Question from "../../components/Question/Question";
 import GameButton from "../../components/GameButton/GameButton";
 import RoundButton from "../../components/RoundButton/RoundButton";
+import NavHome from '../../components/NavHome/NavHome';
 
 export default class GamePage extends Component {
   state = {
@@ -62,6 +63,7 @@ export default class GamePage extends Component {
   render() {
     return (
       <>
+        <NavHome />
         <Header
           round={this.state.round}
           roundScore={this.state.roundScore}

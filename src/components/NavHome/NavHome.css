@@ -1,0 +1,16 @@
+.NavHome {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.NavLink {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+
+}
+
+.NavLink:hover {
+  color: gold;
+}

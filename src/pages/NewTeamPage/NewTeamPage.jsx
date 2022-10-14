@@ -4,6 +4,7 @@ import "./NewTeamPage.css";
 
 import NewTeamForm from '../../components/NewTeamForm/NewTeamForm';
 import NewTeamPost from '../../components/NewTeamPost/NewTeamPost';
+import NavHome from '../../components/NavHome/NavHome';
 
 export default class NewTeamPage extends Component {
 
@@ -30,6 +31,7 @@ export default class NewTeamPage extends Component {
   render() {
     return (
       <div className="NewTeam">
+        <NavHome />
         <h1 className="NewT">NEW TEAM</h1><hr /><br />
         <NewTeamForm getTeams={this.getTeams} />
         <br /><br />
