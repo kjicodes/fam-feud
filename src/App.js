@@ -44,8 +44,8 @@ export default class App extends Component {
           <Route path="*" element={<Navigate to="/warfeud" replace />} />
         </Routes>
         {/* ) : (
-          <AuthPage setUserInState={this.setUserInState} /> */}
-        {/* )} */}
+          <AuthPage setUserInState={this.setUserInState} />
+        )} */}
       </main>
     );
   }

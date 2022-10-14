@@ -18,6 +18,11 @@ _WE'RE ALL REALATED Feud_ is a remake attempt of the daytime game show, "Family 
 ![round 2](https://i.imgur.com/DuE7tfA.jpg)
 ![round 3](https://i.imgur.com/5BGaNJx.jpg)
 
+## Login / Sign Up
+
+![Login](https://i.imgur.com/lZrgCTM.jpg)
+![Signup](https://i.imgur.com/cDJh4sP.jpg)
+
 ## Technologies Used:
 
 - React
