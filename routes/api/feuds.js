@@ -2,10 +2,10 @@ const express = require("express");
 const router = express.Router();
 const feudCtrl = require("../../controllers/feuds");
 
-// GET all posts
+// GET all teams
 router.get("/", feudCtrl.index);
 
-// POST new post
-router.post("/", feudCtrl.create);
+// POST new team
+router.post("/warfeud/new", feudCtrl.create);
 
 module.exports = router;
