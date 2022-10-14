@@ -5,6 +5,7 @@ import AuthPage from "./pages/AuthPage/AuthPage";
 import GamePage from "./pages/GamePage/GamePage";
 import HomePage from "./pages/HomePage/HomePage";
 import NewTeamPage from "./pages/NewTeamPage/NewTeamPage";
+import Nav from "./components/Nav/Nav";
 
 export default class App extends Component {
   state = {
@@ -15,7 +16,7 @@ export default class App extends Component {
     let token = localStorage.getItem("token");
     if (token) {
       const payload = JSON.parse(atob(token.split(".")[1]));
-      if (payload.exp < Date.now() / 2000) {
+      if (payload.exp < Date.now() / 1000) {
         localStorage.removeItem("token");
         token = null;
       } else {
@@ -32,6 +33,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
+        <Nav />
         {this.state.user ? (
           <Routes>
             <Route path="/warfeud" element={<HomePage />} />
