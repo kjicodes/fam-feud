@@ -2,11 +2,11 @@ const Feud = require("../models/feud");
 
 module.exports = {
   index: index,
-  show,
-  new: newFeud,
+  // show,
+  // new: newFeud,
   create,
   delete: deleteFeud,
-  edit,
+  // edit,
   update,
 };
 

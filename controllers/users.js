@@ -7,7 +7,6 @@ const SALT_ROUNDS = 7;
 module.exports = {
   create,
   login,
-  logout,
 };
 
 async function create(req, res) {
@@ -36,13 +35,5 @@ async function login(req, res) {
     res.status(200).json(token);
   } catch {
     res.status(400).json(err);
-  }
-}
-
-async function logOut(req, res) {
-  try {
-    localStorage.removeItem("token");
-  } catch {
-    res.status(400).json("Unable to log out");
   }
 }

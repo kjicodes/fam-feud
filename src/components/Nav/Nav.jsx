@@ -3,7 +3,7 @@ import { Component } from "react";
 import "./Nav.css";
 import { Link } from "react-router-dom";
 
-export default class Nav extends Component() {
+export default class Nav extends Component(props) {
   render() {
     return (
       <nav className="navbar">
