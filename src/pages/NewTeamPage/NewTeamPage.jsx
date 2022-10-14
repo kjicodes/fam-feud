@@ -11,7 +11,6 @@ export default class NewTeamPage extends Component {
     teams: []
   }
 
-  
 
   getTeams = async () => {
     await fetch("/api")
