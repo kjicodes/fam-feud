@@ -35,6 +35,13 @@ export default class NewTeamPage extends Component {
     this.getTeams();
   }
 
+  deleteTeam = (e) => {
+    e.preventDefault();
+    this.setState({
+      teams: this.state.teams.filter((team) => team !== e.target.value),
+    });
+  };
+
   render() {
     return (
       <div className="NewTeam">
