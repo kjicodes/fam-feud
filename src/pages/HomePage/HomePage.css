@@ -4,11 +4,11 @@
 
 .Title {
   text-align: center;
-  color: #CC8B65;
+  color: #cc8b65;
 }
 
 .Instructions {
-  color: gold;       
+  color: gold;
   text-align: center;
 }
 
@@ -17,12 +17,12 @@
 }
 
 .Related {
-  color: #CC8B65;
-  font-size: 20px;        
+  color: #cc8b65;
+  font-size: 20px;
 }
 
 .Team {
-  color: #CC8B65;
+  color: #cc8b65;
 }
 
 .Link {
@@ -35,7 +35,7 @@
 }
 
 .New:hover {
-  color: #CC8B65;
+  color: #cc8b65;
   outline: 7px solid white;
 }
 
@@ -43,6 +43,6 @@
   color: gold;
   background-color: black;
   border: 6px solid black;
-  outline: 7px solid #CC8B65;
+  outline: 7px solid #cc8b65;
   text-decoration: none;
 }

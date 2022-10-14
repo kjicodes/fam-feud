@@ -1,14 +1,15 @@
-import React from "react";
 import { Component } from "react";
 import "./Nav.css";
 import { Link } from "react-router-dom";
 
-export default class Nav extends Component(props) {
+export default class Nav extends Component {
   render() {
     return (
       <nav className="navbar">
         <ul className="nav-link">
-          <li className="title">We're All Related Feud</li>
+          {/* <Link to="/" className="title">
+            We're All Related Feud
+          </Link> */}
           <li>
             <Link to="/warfeud/game" className="game">
               Play Game

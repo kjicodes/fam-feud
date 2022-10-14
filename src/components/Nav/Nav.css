@@ -1,12 +1,17 @@
-ul {
+.navbar {
+  text-align: right;
+}
+/* 
+/* ul {
   width: auto;
   float: right;
-  margin-top: 9px;
-}
+  margin-top: 2px;
+} */
 
 li {
   display: inline-block;
-  padding: 5px 3px;
+  padding: 30px;
+  text-align: right;
 }
 
 .title {
@@ -20,8 +25,9 @@ li {
   height: 50px;
   font-family: "Nabla", cursive;
 }
+*/
 
-.game {
+/* .game {
   text-decoration: none;
   color: #fff;
   font-size: 1.2em;
@@ -30,7 +36,7 @@ li {
   border-radius: 5px;
   transition: all 0.3s ease;
 }
-/* .game {
+.game {
   text-align: center;
   text-decoration: none;
   font-family: "Ubuntu", sans-serif;
@@ -54,24 +60,19 @@ li {
   color: white;
   font-size: 1.2em;
   font-weight: 600;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+
   cursor: pointer;
 }
 
 .dropdown {
   position: right;
-  display: inline-block;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #e3dcd2;
-  min-width: 50px;
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  min-width: 100px;
 }
 
 .dropdown-content a {

@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
+// import Nav from "../../components/Nav/Nav";
 import "./NewTeamPage.css";
 
 export default class NewTeamPage extends Component {
@@ -11,17 +12,15 @@ export default class NewTeamPage extends Component {
 
   //Backend
   getTeams = async () => {
-    await fetch('/api')
-      .then(res => res.json()) 
-      .then(teams => this.setState({ teams })) // correctly grabbing teams?
-  }
+    await fetch("/api")
+      .then((res) => res.json())
+      .then((teams) => this.setState({ teams })); // correctly grabbing teams?
+  };
 
   componentDidMount() {
-    this.getTeams()
+    this.getTeams();
   }
 
-
-  
   handleChange = (e) => {
     // console.log(e.target.value)
     this.setState({ [e.target.name]: e.target.value });
@@ -42,10 +41,11 @@ export default class NewTeamPage extends Component {
   };
 
   deleteTeam = (e) => {
-    e.preventDefault()
-    this.setState({ teams: this.state.teams.filter(team => team !== e.target.value)})
-  }
-  
+    e.preventDefault();
+    this.setState({
+      teams: this.state.teams.filter((team) => team !== e.target.value),
+    });
+  };
 
   render() {
     return (
@@ -83,29 +83,36 @@ export default class NewTeamPage extends Component {
           <br />
           <button className="CreateBtn">CREATE TEAM</button>
         </form>
-        <br /><br />
-        <Link className='Play' to='/warfeud/game'>PLAY GAME</Link><br /><br /><hr />
-        <h2>TEAM HISTORY</h2><br />
-        <table className='Table'>
+        <br />
+        <br />
+        <Link className="Play" to="/warfeud/game">
+          PLAY GAME
+        </Link>
+        <br />
+        <br />
+        <hr />
+        <h2>TEAM HISTORY</h2>
+        <br />
+        <table className="Table">
           <tbody>
-
-            {this.state.teams.length ? 
-              this.state.teams.map(t => (
+            {this.state.teams.length ? (
+              this.state.teams.map((t) => (
                 <tr>
                   <td>
-                    <div>{t.name} - {t.players}</div>
+                    <div>
+                      {t.name} - {t.players}
+                    </div>
                   </td>
                   <td>
-                  <form onSubmit={this.deleteTeam}>
-                    <button id='x'>X</button>
-                  </form>
-                </td>
-              </tr>
-            ))
-              :
+                    <form onSubmit={this.deleteTeam}>
+                      <button id="x">X</button>
+                    </form>
+                  </td>
+                </tr>
+              ))
+            ) : (
               <h2>No teams yet</h2>
-            }
-
+            )}
           </tbody>
         </table>
       </div>

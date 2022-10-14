@@ -4,10 +4,10 @@
   background-color: #013328;
   color: #e3dcd2;
   font-family: "Exo 2";
-  padding: 20px;
+  padding: 200px;
 }
 
-ul {
+/* ul {
   width: auto;
   float: right;
   margin-top: 9px;
@@ -95,4 +95,4 @@ li {
 
 .dropdown:hover .dropbtn {
   background-color: #e3dcd2;
-}
+} */

@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
+
+import Nav from "./components/Nav/Nav";
 // import AuthPage from "./pages/AuthPage/AuthPage";
 import GamePage from "./pages/GamePage/GamePage";
 import HomePage from "./pages/HomePage/HomePage";
 import NewTeamPage from "./pages/NewTeamPage/NewTeamPage";
-// import Nav from "./components/Nav/Nav";
 
 export default class App extends Component {
   state = {
@@ -20,8 +21,8 @@ export default class App extends Component {
         localStorage.removeItem("token");
         token = null;
       } else {
-        let userDoc = payload.user;
-        this.setState({ user: userDoc });
+        let userDo = payload.user;
+        this.setState({ user: userDo });
       }
     }
   };
@@ -32,7 +33,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <main className="App">
+        <Nav user={this.state.user} />
+        <br />
         {/* {this.state.user ? ( */}
         <Routes>
           <Route path="/warfeud" element={<HomePage />} />
@@ -43,7 +46,7 @@ export default class App extends Component {
         {/* ) : (
           <AuthPage setUserInState={this.setUserInState} />
         )} */}
-      </div>
+      </main>
     );
   }
 }
