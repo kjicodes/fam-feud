@@ -1,9 +1,11 @@
 import { Component } from "react";
+import "./LoginForm.css";
 
 export default class LoginForm extends Component {
   state = {
     email: "",
     password: "",
+    confirm: "",
     error: "",
   };
 
@@ -40,13 +42,14 @@ export default class LoginForm extends Component {
   };
 
   render() {
+    const disable = this.state.password !== this.state.confirm;
     return (
       <div>
-        <div className="form-container" onSubmit={this.handleSubmit}>
-          <form autoComplete="off">
+        <div className="form-container">
+          <form autoComplete="off" onSubmit={this.handleSubmit}>
             <label>Email</label>
             <input
-              type="text"
+              type="email"
               name="email"
               value={this.state.email}
               onChange={this.handleChange}
@@ -60,7 +63,17 @@ export default class LoginForm extends Component {
               onChange={this.handleChange}
               required
             />
-            <button type="submit">LOG IN</button>
+            <label>Confirm</label>
+            <input
+              type="password"
+              name="confirm"
+              value={this.state.confirm}
+              onChange={this.handleChange}
+              required
+            />
+            <button type="submit" disabled={disable}>
+              SIGN UP
+            </button>
           </form>
         </div>
         <p className="error-message">&nbsp;{this.state.error}</p>

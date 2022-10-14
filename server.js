@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, "build")));
 app.use(require("./config/auth"));
 
 app.use("/api/users", require("./routes/api/users"));
+// ADD feud routes:
 app.use("/api", require("./routes/api/feuds"));
 
 // A single catch-all route - listens for anything after the '/'

@@ -1,7 +1,7 @@
 import { Component } from "react";
 import "./AuthPage.css";
-import LoginForm from "../../components/LoginForm/LoginForm";
-import SignUpForm from "../../components/SignUpForm/SignUpForm";
+import SignUpForm from "../../components/LoginForm/LoginForm";
+import LoginForm from "../../components/SignUpForm/SignUpForm";
 
 export default class AuthPage extends Component {
   state = {
@@ -15,7 +15,7 @@ export default class AuthPage extends Component {
           <h3
             onClick={() => this.setState({ showLogin: !this.state.showLogin })}
           >
-            {this.state.showLogin ? "SIGN UP" : "LOG IN"}
+            {this.state.showLogin ? "LOG IN" : "SIGN UP"}
           </h3>
         </div>
         {this.state.showLogin ? (

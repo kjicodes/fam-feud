@@ -1,10 +1,10 @@
 import { Component } from "react";
+import "./SignUpForm.css";
 
 export default class SignUpForm extends Component {
   state = {
     email: "",
     password: "",
-    confirm: "",
     error: "",
   };
 
@@ -35,20 +35,19 @@ export default class SignUpForm extends Component {
       const userDoc = JSON.parse(atob(token.split(".")[1])).user;
       this.props.setUserInState(userDoc);
     } catch (err) {
-      console.log("SignupForm error", err);
+      console.log("SignUpForm error", err);
       this.setState({ error: "Try Again" });
     }
   };
 
   render() {
-    const disable = this.state.password !== this.state.confirm;
     return (
       <div>
-        <div className="form-container">
-          <form autoComplete="off" onSubmit={this.handleSubmit}>
+        <div className="form-container" onSubmit={this.handleSubmit}>
+          <form autoComplete="off">
             <label>Email</label>
             <input
-              type="email"
+              type="text"
               name="email"
               value={this.state.email}
               onChange={this.handleChange}
@@ -62,17 +61,7 @@ export default class SignUpForm extends Component {
               onChange={this.handleChange}
               required
             />
-            <label>Confirm</label>
-            <input
-              type="password"
-              name="confirm"
-              value={this.state.confirm}
-              onChange={this.handleChange}
-              required
-            />
-            <button type="submit" disabled={disable}>
-              SIGN UP
-            </button>
+            <button type="submit">LOG IN</button>
           </form>
         </div>
         <p className="error-message">&nbsp;{this.state.error}</p>
