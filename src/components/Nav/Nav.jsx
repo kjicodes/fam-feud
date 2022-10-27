@@ -8,7 +8,7 @@ export default class Nav extends Component {
       <ul>
         <li>
           <Link to="/warfeud" className="game">
-            Log Out
+            Signup
           </Link>
         </li>
 
@@ -22,9 +22,6 @@ export default class Nav extends Component {
             Play Game
           </Link>
         </li>
-        <Link to="/" className="title">
-          We're All Related Feud
-        </Link>
       </ul>
     );
   }
