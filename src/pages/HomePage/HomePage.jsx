@@ -6,7 +6,6 @@ import NavHome from "../../components/NavHome/NavHome";
 export default function HomePage(props) {
   return (
     <div className="Home">
-      <NavHome />
       <h1 className="Title">WE'RE ALL RELATED Feud</h1>
       <br />
       <p className="Instr">
