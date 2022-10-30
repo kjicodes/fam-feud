@@ -65,6 +65,7 @@ export default class NewTeamPage extends Component {
           <h2>No Teams</h2>
         )}
       </div>
+      
     );
   }
 }

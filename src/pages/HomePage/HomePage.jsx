@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "./HomePage.css";
 
-import NavHome from "../../components/NavHome/NavHome";
 
 export default function HomePage(props) {
   return (
@@ -17,6 +16,14 @@ export default function HomePage(props) {
       </p>
       <hr />
       <p className="Instructions">INSTRUCTIONS</p>
+      <p>
+        There are 3 rounds. 
+        When a player guesses correctly, hit the "ADD POINTS" button to add 20 points per correct guess. 
+        If a player guesses incorrectly, hit the "STRIKE" button to deduct a chance. 
+        Each player has 3 chances. 
+        Proceed to the next round once the Round Score hits 100 points.
+        The game ends when there are no more chances.  
+      </p>
       <p>
         To play, create a <span className="Team">new team</span> using the link
         below.

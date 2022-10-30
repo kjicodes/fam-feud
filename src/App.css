@@ -4,8 +4,8 @@
 }
 
 .App {
+  margin: 0;
   background-color: #013328;
   color: #e3dcd2;
   font-family: "Exo 2";
-  margin: 0px;
 }

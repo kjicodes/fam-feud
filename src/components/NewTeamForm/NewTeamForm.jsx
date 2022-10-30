@@ -1,4 +1,5 @@
 import { Component } from "react";
+import './NewTeamForm.css'
 
 
 export default class NewTeamForm extends Component {
@@ -51,9 +52,8 @@ export default class NewTeamForm extends Component {
             onChange={this.handleChange}
             required
             pattern=".{2,}"
-          />
-          <br />
-        <button className="CreateBtn" onClick={this.handleSubmit}>CREATE TEAM</button>
+          /> 
+          <button className="CreateBtn" onClick={this.handleSubmit}>CREATE TEAM</button>
       </div>
     );
   }

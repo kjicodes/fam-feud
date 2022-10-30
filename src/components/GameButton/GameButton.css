@@ -16,10 +16,18 @@
   border: none;
 }
 
+#add:hover {
+  color: red;
+}
+
 #strike {
   background-color: red;
   color: white;
   border: none;
+}
+
+#strike:hover {
+  color: black;
 }
 
 #status {

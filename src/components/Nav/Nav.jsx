@@ -1,28 +1,13 @@
-import { Component } from "react";
-import "./Nav.css";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import './Nav.css';
 
-export default class Nav extends Component {
-  render() {
-    return (
-      <ul>
-        <li>
-          <Link to="/warfeud" className="game">
-            Signup
-          </Link>
-        </li>
-
-        <li>
-          <Link to="/warfeud" className="game">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/warfeud/game" className="game">
-            Play Game
-          </Link>
-        </li>
-      </ul>
-    );
-  }
+export default function Nav(props) {
+  return (
+    <div className='Nav'>
+      <Link className='NavLink' to="/warfeud/game">Play Game</Link>
+      <Link className='NavLink' to="/warfeud/new">Create Team</Link>
+      <span id="divide">|</span>
+      <Link className='NavHome' to="/warfeud">HOME</Link>
+    </div>
+  )
 }

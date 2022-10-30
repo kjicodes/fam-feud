@@ -1,5 +1,6 @@
 .Question {
   text-align: center;
+  font-size: 40px;
   border: 10px solid white;
   outline: 3px solid black;
   color: #CC8B65;

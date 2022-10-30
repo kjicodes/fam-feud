@@ -1,26 +1,34 @@
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+.Nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
 }
 
-li {
-  float: right;
-  background-color: #333;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 30px 30px;
+.NavLink {
   text-decoration: none;
-  background-color: #333;
+  background-color: black;
+  color: white;
+  padding: 20px;
 }
 
-li a:hover {
-  background-color: #ffd700;
+.NavLink:hover {
+  color: gold;
+}
+
+.NavHome {
+  text-decoration: none;
+  background-color: black;
+  color: #cc8b65;
+  padding: 20px;
+}
+
+.NavHome:hover {
+  color: gold;
+}
+
+#divide {
+  background-color: black;
+  color: #013328;
 }
 
